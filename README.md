@@ -10,10 +10,28 @@ Website profil perusahaan dengan produk, berita, galeri, dan kontak.
 
 ## Teknologi
 
-- **PHP** - Bahasa pemrograman server-side
-- **MySQL** - Database
-- **Bootstrap 5** - Styling & responsive
-- **HTML5 + CSS3 + JavaScript** - Front-end
+**Backend**
+- PHP 8.x - server-side scripting
+- JSON-file based data storage (products, news, gallery)
+- Session-based authentication (bcrypt) & CMS admin
+
+**Frontend**
+- HTML5 semantik, CSS3 custom (handcrafted), JavaScript (ES6+)
+- Responsive tanpa framework
+
+**Database**
+- JSON file storage - lightweight & portable
+
+**Tooling & DevOps**
+- Git & GitHub
+- Laragon/WAMP
+
+## Arsitektur
+
+- **Front-end first** - hanya berisi tampilan depan (public UI)
+- Routing & layout modular (includes, pages)
+- Keamanan berlapis: prepared statements, input sanitization, password hashing
+- Session-based auth dengan bcrypt & role-based access control
 
 ## Quick Start
 
@@ -21,9 +39,9 @@ Prasyarat: [Laragon](https://laragon.org) / [XAMPP](https://www.apachefriends.or
 
 1. Clone repository ke folder laragon/www/ atau htdocs/:
 
-   `ash
+   ```bash
    git clone https://github.com/Celieln/PT.git
-   `
+   ```
 
 2. Import database (jika tersedia) melalui phpMyAdmin.
 3. Konfigurasi koneksi database di folder config/.
@@ -31,12 +49,12 @@ Prasyarat: [Laragon](https://laragon.org) / [XAMPP](https://www.apachefriends.or
 
 ## Struktur Proyek
 
-`
+```
 PT/
-  includes/    # Komponen yang di-include
+  includes/    # Komponen yang di-include (header, footer, dll)
   assets/      # CSS, JS, gambar
   *.php        # Halaman tampilan depan
-`
+```
 
 ## Kontribusi
 
@@ -44,4 +62,4 @@ Kontribusi sangat diterima! Baca [CONTRIBUTING](CONTRIBUTING.md) dan buka [Issue
 
 ## Lisensi
 
-[MIT](LICENSE) Â© [Celieln](https://github.com/Celieln)
+[MIT](LICENSE) (c) [Celieln](https://github.com/Celieln)
